@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends 'crudapp/index.html' %}
+
+{% block body_block %}
+  <form  method="post">
+    {{form.as_p}}
+   {% csrf_token %}
+    <input type="submit" class="btn btn-danger" value="insert/update">
+  </form>
+{% endblock %}

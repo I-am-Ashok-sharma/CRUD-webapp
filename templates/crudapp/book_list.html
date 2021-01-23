@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends 'crudapp/index.html' %}
+
+{% block body_block %}
+  <h2>Book available in store is given below</h2>
+   {% for book in book_list %}
+     <h3><a href="/{{book.id}}">{{book.title}}</a></h3>
+  {% endfor %}
+  <a href="Create/" class="btn btn-primary">Add books in store</a>
+{% endblock %}

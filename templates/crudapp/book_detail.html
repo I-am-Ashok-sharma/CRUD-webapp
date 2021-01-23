@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'crudapp/index.html' %}
+
+{% block body_block %}
+  <h2>{{book.title}}Book information is given below</h2>
+   <ul>
+     <li>Book author:{{book.author}}</li>
+     <li>Book pages:{{book.pages}}</li>
+     <li>Book price:{{book.price}}</li>
+   </ul>
+   <a href="/Update/{{book.id}}" class="btn btn-warning">Update</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     <a href="/delete/{{book.id}}"  class="btn btn-danger" >Delete</a>
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+   <a href="/"  class="btn btn-success" >Home</a>
+
+{% endblock %}
